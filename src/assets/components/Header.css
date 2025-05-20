@@ -1,0 +1,28 @@
+/* HEADER */
+.Header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Header-user-icon {
+    font-size: 24px;
+    color: #20519f;
+    cursor: pointer;
+}
+
+.Header-user-name {
+    font-size: 14px;
+    color: #20519f;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.Header {
+    height: 60px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-weight: bold;
+  }
