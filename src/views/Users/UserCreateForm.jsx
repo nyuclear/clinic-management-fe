@@ -1,5 +1,5 @@
-import { Modal, Form, Input, Button, message } from 'antd';
-import { useEffect, useState } from 'react';
+import { Modal, Button, message } from 'antd';
+import { useState } from 'react';
 import axios from 'axios';
 
 export default function UserCreateForm({isOpen, onClose, onSuccess}) {

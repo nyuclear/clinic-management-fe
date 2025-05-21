@@ -4,7 +4,6 @@ import { Dropdown } from 'antd';
 import { useEffect, useState } from "react";
 
 export default function Header() {
-    const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")),null);
     const [userDropdown, setUserDropdown] = useState([]);
 
     const logout = () => {
