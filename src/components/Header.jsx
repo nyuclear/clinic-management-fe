@@ -32,9 +32,9 @@ export default function Header() {
             <div className="Header-user">   
                 {/* <label className="Header-user-name">Xin chào, {user.name}</label> */}
                 <Dropdown menu={{ items: userDropdown }}>
-                    <a onClick={(e) => e.preventDefault()}>
+                    <button onClick={(e) => e.preventDefault()}>
                        <i className="Header-user-icon fa-solid fa-address-card"></i>
-                    </a>
+                    </button>
                 </Dropdown>
             </div>
         </div>
