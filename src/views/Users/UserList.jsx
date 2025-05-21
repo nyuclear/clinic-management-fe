@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import CommonLayout from "../../components/CommonLayout";
 import Card from "../../components/Card";
-import { Button, Pagination, message, Modal } from 'antd';
+import { Button, Pagination, message } from 'antd';
 import UserCreateForm from "./UserCreateForm";
 import UserFrom from "./UserFrom";
 import axiosInstance from "../../context/AxiosInstance";
@@ -32,27 +32,26 @@ export default function UserList() {
         });
     };
 
-    const fetchUsers = () => {
+    const fetchUsers = useCallback(() => {
         axiosInstance
-        .get(`/users?current_page=${pagination.currentPage}&per_page=${pagination.perPage} `)
-        .then((response) => {
-            let result = response.data;
+          .get(`/users?current_page=${pagination.currentPage}&per_page=${pagination.perPage}`)
+          .then((response) => {
+            const result = response.data;
             setUsers(result.data);
-            // setPagination({
-            //     currentPage: result.meta.current_page,
-            //     perPage: result.meta.per_page,
-            //     totalUsers: result.meta.total,
-            // });
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-    };
-
-    useEffect(() => {
-        console.log(1233);
-        fetchUsers(); // gọi fetchUsers khi component mount (load lần đầu)
+            // setPagination nếu muốn update totalUsers từ API
+            // setPagination(prev => ({
+            //   ...prev,
+            //   totalUsers: result.meta.total,
+            // }));
+          })
+          .catch((error) => {
+            console.error(error);
+          });
       }, [pagination.currentPage, pagination.perPage]);
+
+      useEffect(() => {
+        fetchUsers();
+      }, [fetchUsers]);
 
     const openUserForm = (user) => {
         setIsUserFormOpen(true);
