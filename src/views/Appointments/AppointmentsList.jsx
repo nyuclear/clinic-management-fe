@@ -16,7 +16,7 @@ export default function AppointmentsList () {
 
     useEffect (() => {
         fetchAppointments();
-    },[])
+    },[fetchAppointments])
 
     return (
         <CommonLayout>
