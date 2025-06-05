@@ -8,8 +8,8 @@ import CommonLayout from "../../components/CommonLayout";
 
 export default function PatientsList() {
     const [patients, setPatients] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
 
     const fetchPatients = useCallback(() => {
         axiosInstance.get('/patients')
@@ -23,7 +23,6 @@ export default function PatientsList() {
 
     useEffect(() => {
         fetchPatients();
-        console.log(patients);
     }, [fetchPatients]);
 
     return (

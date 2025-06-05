@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import CommonLayout from "../../components/CommonLayout";
 import Card from "../../components/Card";
-import { Button, Pagination, message } from 'antd';
+import { Button } from 'antd';
 import axiosInstance from "../../context/AxiosInstance";
 
 export default function AppointmentsList () {
@@ -12,7 +12,7 @@ export default function AppointmentsList () {
         .then((response) => {
             setAppointments(response.data)
         })
-    })
+    }, [])
 
     useEffect (() => {
         fetchAppointments();
