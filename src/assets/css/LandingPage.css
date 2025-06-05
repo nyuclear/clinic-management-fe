@@ -1,0 +1,56 @@
+.landing-page {
+    min-height: 100vh;
+    background: linear-gradient(to right, #20519f, #13885d);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .main {
+    max-width: 600px;
+  }
+  
+  .description {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .get-started-button {
+    background-color: white;
+    color: #20519f;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .get-started-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .footer {
+    margin-top: 3rem;
+    font-size: 0.875rem;
+    color: #d1d5db;
+  }
+  

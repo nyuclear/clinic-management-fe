@@ -140,7 +140,7 @@ export default function UserList() {
                                             </div>
                                             {user.status ? 
                                             <div title="Active" onClick={() => handleActiveUser(user.id)}>
-                                                <i class="fa-solid fa-unlock"></i>
+                                                <i className="fa-solid fa-unlock"></i>
                                             </div> : 
                                             <div title="InActive" onClick={() => handleConfirmDelete(user.id)}>
                                                 <i className="fa-solid fa-xmark"></i>
